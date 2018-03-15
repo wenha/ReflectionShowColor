@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ShowColor.Models.Div>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron container">
+    <h3>遍历System.Drawing.Color</h3>
+    <form id="form1">
+        <div id="colors" style="align-content:center">
+            @foreach(var item in Model)
+            {
+                <div style="background-color:@item.ColorName; float:left; width:180px; margin:10px; text-align:center; padding: 10px 0;">
+                    @item.ColorName<br />
+                    @item.ColorR,@item.ColorG,@item.ColorB
+                </div>
+            }
+        </div>
+    </form>
+</div>
